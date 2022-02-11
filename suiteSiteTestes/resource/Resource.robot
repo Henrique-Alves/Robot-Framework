@@ -19,4 +19,15 @@ Acessar a página home do site
     Title Should Be    My Store
 
 Digitar o nome do produto "${produto}" no campo de pesquisa
-   Input Text   id=search_query_top    ${produto}
+   Input Text   name=search_query    ${produto}
+
+Clicar no botão Pesquisar
+  Click Element    name=submit_search
+
+Conferir se o produto "${produto}" foi listado no site
+  Wait Until Element Is Visible    css=#center_column > h1
+  Title Should Be     Search - My Store
+
+Conferir mensagem de erro "No results were found for your search "${MENSAGEM_ALERTA}""
+  Wait Until Element Is Visible       css=#center_column > h1
+  Element Text Should Be     //*[@id="center_column"]/p
