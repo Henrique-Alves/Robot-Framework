@@ -9,8 +9,10 @@ ${BROWSER}      chrome
 #### Setup e Teardown
 Abrir navegador
     Open Browser  about:blank    ${BROWSER}
+    Maximize Browser Window
 
 Fechar navegador
+    Capture Page Screenshot
     Close Browser
 
 ####Passo a Passo

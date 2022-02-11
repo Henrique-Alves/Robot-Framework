@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220210 20:06:49.959" rpa="false" schemaversion="2">
+<robot generator="Robot 4.1.3 (Python 3.10.2 on win32)" generated="20220211 14:25:45.734" rpa="false" schemaversion="2">
 <suite id="s1" name="TestSitePractice" source="C:\Projeto Robot\suiteSiteTestes\tests\TestSitePractice.robot">
 <test id="s1-t1" name="Caso de Teste 01: Pesquisar produto existente">
 <kw name="Abrir navegador" library="Resource" type="SETUP">
@@ -7,113 +7,142 @@
 <arg>about:blank</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220210 20:06:50.160" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220210 20:06:50.160" endtime="20220210 20:06:51.759"/>
+<msg timestamp="20220211 14:25:47.986" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
+<status status="PASS" starttime="20220211 14:25:47.986" endtime="20220211 14:25:57.497"/>
 </kw>
-<status status="PASS" starttime="20220210 20:06:50.160" endtime="20220210 20:06:51.759"/>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20220211 14:25:57.497" endtime="20220211 14:25:57.852"/>
+</kw>
+<status status="PASS" starttime="20220211 14:25:47.985" endtime="20220211 14:25:57.853"/>
 </kw>
 <kw name="Acessar a página home do site" library="Resource">
 <kw name="Go To" library="SeleniumLibrary">
 <arg>http://automationpractice.com</arg>
 <doc>Navigates the current browser window to the provided ``url``.</doc>
-<msg timestamp="20220210 20:06:51.761" level="INFO">Opening url 'http://automationpractice.com'</msg>
-<status status="PASS" starttime="20220210 20:06:51.761" endtime="20220210 20:07:01.867"/>
+<msg timestamp="20220211 14:25:57.860" level="INFO">Opening url 'http://automationpractice.com'</msg>
+<status status="PASS" starttime="20220211 14:25:57.860" endtime="20220211 14:26:14.470"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>My Store</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220210 20:07:01.880" level="INFO">Page title is 'My Store'.</msg>
-<status status="PASS" starttime="20220210 20:07:01.867" endtime="20220210 20:07:01.881"/>
+<msg timestamp="20220211 14:26:14.556" level="INFO">Page title is 'My Store'.</msg>
+<status status="PASS" starttime="20220211 14:26:14.471" endtime="20220211 14:26:14.556"/>
 </kw>
-<status status="PASS" starttime="20220210 20:06:51.760" endtime="20220210 20:07:01.881"/>
+<status status="PASS" starttime="20220211 14:25:57.857" endtime="20220211 14:26:14.557"/>
 </kw>
 <kw name="Digitar o nome do produto &quot;Blouse&quot; no campo de pesquisa" library="Resource" sourcename="Digitar o nome do produto &quot;${produto}&quot; no campo de pesquisa">
 <kw name="Input Text" library="SeleniumLibrary">
 <arg>name=search_query</arg>
 <arg>${produto}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<msg timestamp="20220210 20:07:01.885" level="INFO">Typing text 'Blouse' into text field 'name=search_query'.</msg>
-<status status="PASS" starttime="20220210 20:07:01.884" endtime="20220210 20:07:02.052"/>
+<msg timestamp="20220211 14:26:14.560" level="INFO">Typing text 'Blouse' into text field 'name=search_query'.</msg>
+<status status="PASS" starttime="20220211 14:26:14.559" endtime="20220211 14:26:15.554"/>
 </kw>
-<status status="PASS" starttime="20220210 20:07:01.882" endtime="20220210 20:07:02.053"/>
+<status status="PASS" starttime="20220211 14:26:14.558" endtime="20220211 14:26:15.554"/>
 </kw>
 <kw name="Clicar no botão Pesquisar" library="Resource">
 <kw name="Click Element" library="SeleniumLibrary">
 <arg>name=submit_search</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<msg timestamp="20220210 20:07:02.055" level="INFO">Clicking element 'name=submit_search'.</msg>
-<status status="PASS" starttime="20220210 20:07:02.054" endtime="20220210 20:07:03.671"/>
+<msg timestamp="20220211 14:26:15.555" level="INFO">Clicking element 'name=submit_search'.</msg>
+<status status="PASS" starttime="20220211 14:26:15.555" endtime="20220211 14:26:20.580"/>
 </kw>
-<status status="PASS" starttime="20220210 20:07:02.053" endtime="20220210 20:07:03.672"/>
+<status status="PASS" starttime="20220211 14:26:15.554" endtime="20220211 14:26:20.580"/>
 </kw>
 <kw name="Conferir se o produto &quot;Blouse&quot; foi listado no site" library="Resource" sourcename="Conferir se o produto &quot;${produto}&quot; foi listado no site">
 <kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
 <arg>css=#center_column &gt; h1</arg>
 <doc>Waits until the element ``locator`` is visible.</doc>
-<status status="PASS" starttime="20220210 20:07:03.676" endtime="20220210 20:07:03.739"/>
+<status status="PASS" starttime="20220211 14:26:20.581" endtime="20220211 14:26:20.676"/>
 </kw>
 <kw name="Title Should Be" library="SeleniumLibrary">
 <arg>Search - My Store</arg>
 <doc>Verifies that the current page title equals ``title``.</doc>
-<msg timestamp="20220210 20:07:03.748" level="INFO">Page title is 'Search - My Store'.</msg>
-<status status="PASS" starttime="20220210 20:07:03.740" endtime="20220210 20:07:03.748"/>
+<msg timestamp="20220211 14:26:20.683" level="INFO">Page title is 'Search - My Store'.</msg>
+<status status="PASS" starttime="20220211 14:26:20.676" endtime="20220211 14:26:20.684"/>
 </kw>
-<status status="PASS" starttime="20220210 20:07:03.674" endtime="20220210 20:07:03.749"/>
-</kw>
-<kw name="Fechar navegador" library="Resource" type="TEARDOWN">
-<kw name="Close Browser" library="SeleniumLibrary">
-<doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220210 20:07:03.751" endtime="20220210 20:07:05.953"/>
-</kw>
-<status status="PASS" starttime="20220210 20:07:03.750" endtime="20220210 20:07:05.953"/>
-</kw>
-<status status="PASS" starttime="20220210 20:06:50.159" endtime="20220210 20:07:05.955"/>
-</test>
-<test id="s1-t2" name="Caso de Teste 02: Pesquisar produto não existente">
-<kw name="Abrir navegador" library="Resource" type="SETUP">
-<kw name="Open Browser" library="SeleniumLibrary">
-<arg>about:blank</arg>
-<arg>${BROWSER}</arg>
-<doc>Opens a new browser instance to the optional ``url``.</doc>
-<msg timestamp="20220210 20:07:05.966" level="INFO">Opening browser 'chrome' to base url 'about:blank'.</msg>
-<status status="PASS" starttime="20220210 20:07:05.965" endtime="20220210 20:07:07.659"/>
-</kw>
-<status status="PASS" starttime="20220210 20:07:05.963" endtime="20220210 20:07:07.659"/>
-</kw>
-<kw name="Acessar a página home do site.">
-<msg timestamp="20220210 20:07:07.672" level="FAIL">No keyword with name 'Acessar a página home do site.' found.</msg>
-<status status="FAIL" starttime="20220210 20:07:07.672" endtime="20220210 20:07:07.672"/>
-</kw>
-<kw name="Digitar o nome do produto &quot;itemInexistente&quot; no campo de pesquisa.">
-<status status="NOT RUN" starttime="20220210 20:07:07.679" endtime="20220210 20:07:07.679"/>
-</kw>
-<kw name="Clicar no botão Pesquisar" library="Resource">
-<status status="NOT RUN" starttime="20220210 20:07:07.679" endtime="20220210 20:07:07.680"/>
-</kw>
-<kw name="Conferir mensagem de erro &quot;No results were found for your search &quot;itemNaoExistente&quot;&quot;" library="Resource" sourcename="Conferir mensagem de erro &quot;No results were found for your search &quot;${MENSAGEM_ALERTA}&quot;&quot;">
-<status status="NOT RUN" starttime="20220210 20:07:07.680" endtime="20220210 20:07:07.680"/>
+<status status="PASS" starttime="20220211 14:26:20.581" endtime="20220211 14:26:20.684"/>
 </kw>
 <kw name="Fechar navegador" library="Resource" type="TEARDOWN">
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20220211 14:26:24.517" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=98.0.4758.82)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00937AC3+2587331]
+	Ordinal0 [0x008CADD1+2141649]
+	Ordinal0 [0x007C3BB8+1063864]
+	Ordinal0 [0x007AC5D0+968144]
+	Ordinal0 [0x0080AE49+1355337]
+	Ordinal0 [0x00818192+1409426]
+	Ordinal0 [0x008084A6+1344678]
+	Ordinal0 [0x007E53F6+1201142]
+	Ordinal0 [0x007E62E6+1204966]
+	GetHandleVerifier [0x00ADDF22+1680738]
+	GetHandleVerifier [0x00B90DBC+2413564]
+	GetHandleVerifier [0x009CD151+563089]
+	GetHandleVerifier [0x009CBF13+558419]
+	Ordinal0 [0x008D081E+2164766]
+	Ordinal0 [0x008D5508+2184456]
+	Ordinal0 [0x008D5650+2184784]
+	Ordinal0 [0x008DF5BC+2225596]
+	BaseThreadInitThunk [0x7712FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77BE7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77BE7A6E+238]
+</msg>
+<msg timestamp="20220211 14:26:25.634" level="FAIL">AttributeError: 'NoneType' object has no attribute 'encode'</msg>
+<status status="FAIL" starttime="20220211 14:26:20.687" endtime="20220211 14:26:25.634"/>
+</kw>
 <kw name="Close Browser" library="SeleniumLibrary">
 <doc>Closes the current browser.</doc>
-<status status="PASS" starttime="20220210 20:07:07.681" endtime="20220210 20:07:09.854"/>
+<status status="PASS" starttime="20220211 14:26:25.635" endtime="20220211 14:26:29.346"/>
 </kw>
-<status status="PASS" starttime="20220210 20:07:07.681" endtime="20220210 20:07:09.854"/>
+<status status="FAIL" starttime="20220211 14:26:20.685" endtime="20220211 14:26:29.347">AttributeError: 'NoneType' object has no attribute 'encode'</status>
 </kw>
-<status status="FAIL" starttime="20220210 20:07:05.960" endtime="20220210 20:07:09.856">No keyword with name 'Acessar a página home do site.' found.</status>
+<status status="FAIL" starttime="20220211 14:25:47.984" endtime="20220211 14:26:29.352">Teardown failed:
+AttributeError: 'NoneType' object has no attribute 'encode'</status>
 </test>
-<status status="FAIL" starttime="20220210 20:06:49.960" endtime="20220210 20:07:09.863"/>
+<status status="FAIL" starttime="20220211 14:25:45.736" endtime="20220211 14:26:29.358"/>
 </suite>
 <statistics>
 <total>
-<stat pass="1" fail="1" skip="0">All Tests</stat>
+<stat pass="0" fail="1" skip="0">All Tests</stat>
 </total>
 <tag>
 </tag>
 <suite>
-<stat pass="1" fail="1" skip="0" id="s1" name="TestSitePractice">TestSitePractice</stat>
+<stat pass="0" fail="1" skip="0" id="s1" name="TestSitePractice">TestSitePractice</stat>
 </suite>
 </statistics>
 <errors>
+<msg timestamp="20220211 14:26:24.517" level="WARN">Keyword 'Capture Page Screenshot' could not be run on failure: Message: no such window: target window already closed
+from unknown error: web view not found
+  (Session info: chrome=98.0.4758.82)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00937AC3+2587331]
+	Ordinal0 [0x008CADD1+2141649]
+	Ordinal0 [0x007C3BB8+1063864]
+	Ordinal0 [0x007AC5D0+968144]
+	Ordinal0 [0x0080AE49+1355337]
+	Ordinal0 [0x00818192+1409426]
+	Ordinal0 [0x008084A6+1344678]
+	Ordinal0 [0x007E53F6+1201142]
+	Ordinal0 [0x007E62E6+1204966]
+	GetHandleVerifier [0x00ADDF22+1680738]
+	GetHandleVerifier [0x00B90DBC+2413564]
+	GetHandleVerifier [0x009CD151+563089]
+	GetHandleVerifier [0x009CBF13+558419]
+	Ordinal0 [0x008D081E+2164766]
+	Ordinal0 [0x008D5508+2184456]
+	Ordinal0 [0x008D5650+2184784]
+	Ordinal0 [0x008DF5BC+2225596]
+	BaseThreadInitThunk [0x7712FA29+25]
+	RtlGetAppContainerNamedObjectPath [0x77BE7A9E+286]
+	RtlGetAppContainerNamedObjectPath [0x77BE7A6E+238]
+</msg>
 </errors>
 </robot>
