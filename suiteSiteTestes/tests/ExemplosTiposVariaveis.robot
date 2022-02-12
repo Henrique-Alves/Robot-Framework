@@ -10,7 +10,7 @@ ${GLOBAL_SIMPLES}  Vamos ver os tipos de variaveis no robot
 @{NOMES}           Henrique  Guto  João  Fabio
 
 #Tipo dicionario
-${PESSOA}         nome=Henrique   email=hernqiuedelicia@gmail.com  idade=23   sexo=masculino
+&{PESSOA}         nome=Henrique   email=hernqiuedelicia@gmail.com  idade=23   sexo=masculino
 
 
 *** Test Cases ***
